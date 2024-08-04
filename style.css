@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    color: #000080;
+}
+p {
+    font-size: clamp(.7rem,1.4325vw,1.2rem);
+}
+h1{
+    font-size: clamp(2rem,5vw,3rem);
+}
+h2{
+    font-size: clamp(1.5rem,4vw,2.5rem);
+}
+h3{
+    font-size: clamp(1.25rem,3vw,2rem);
+}
+h4{
+    font-size: clamp(1rem,2.5vw,1.8rem);
+}
+h5{
+    font-size: clamp(0.875rem,2vw,1.5rem);
+}
+h6{
+    font-size: clamp(0.75rem,1.5vw,1.25rem);
+}
+
+
+.navbar-brand{
+    padding-left: clamp(0.2rem,5vw,10rem);
+}
+nav{
+    background-color: rgba(255,255,255,0.4);
+}
+.navbar{
+    padding:0;
+}
+.navbar-brand .responsive-img {
+    width: clamp(3.5em, 9.5vw, 8.5em);
+    height: auto; /* Maintain aspect ratio */
+}
+.navbar-expand-sm .navbar-nav .nav-link {
+    font-size:clamp(0.5rem,5vw,1.5rem);
+    font-weight: 300;
+    margin-left: clamp(1rem,2vw,3rem);
+}
+.navbar-expand-sm .navbar-nav .nav-link:last-child{
+    margin-right:clamp(1rem,1vw,2rem) ;
+}
+.navbar-toggler {
+    border: none; /* Remove the border */
+    padding: 0;   /* Remove padding */
+    background: transparent; /* Remove background color */
+    outline: none; 
+    margin-right:clamp(1rem,1vw,2rem) ;
+    height: auto;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none; /* Removes the focus outline on click */
+    box-shadow: none; /* Removes the box shadow */
+}
+.navbar-toggler-icon {
+    width:clamp(1.4rem,5.3vw,5rem);
+}
+.nav-link-blue {
+    color: #000080; /* Set the text color to blue */
+    font-family:"Oswald";
+}
+
+.nav-link-blue:hover {
+    color: #ffd11a; /* Optional: Set a different color on hover */
+}
+.nav-link-blue {
+    color: #000080; /* Set the text color to blue */
+    font-family: "Oswald", sans-serif;
+    position: relative; /* Required to position the ::after pseudo-element */
+    text-decoration: none; /* Remove the default underline */
+}
+
+.nav-link-blue:hover {
+    color: #ffd11a; /* Set a different color on hover */
+}
+
+.nav-link-blue::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.125rem; /* Equivalent to 2px in rem */
+    background: #ffd11a;
+    bottom: 0; /* Position the underline at the bottom */
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%); /* Center the underline horizontally */
+}
+
+.nav-link-blue:hover::after {
+    width: 100%;
+}
+
+header {
+    margin:0;
+}
+.container-fluid {
+    margin-top: 0;
+    height: auto;
+}
+.carousel-indicators [data-bs-target]{
+    width: 1.2rem;
+}
+
+/* services intro styles for line */
+.timeline h5{
+    margin-bottom: 0.5rem;
+    color:#000080;
+}
+.timeline {
+    margin: 2em auto 0 auto;
+    max-width: 34.15em;
+}
+.timeline-bg{
+    background: linear-gradient(to right, rgba(179,179,255,0),rgba(204,204,255,1));
+}
+
+.checkpoint {
+    max-width: 39em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+.checkpoint div{
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0px 0.25rem 0.5rem rgba(0,0,128,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.8em;
+    text-align: center;
+}
+.checkpoint div:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0.5rem 1rem rgba(0,0,128,0.7);
+}
+.checkpoint i{
+    color: #00e6e6;
+}
+.checkpoint p{
+        margin-top: 0;
+        margin-bottom: clamp(0.4rem, 1vw, 1rem);
+}
+.checkpoint:nth-child(odd) {
+    border-left: 3px solid #000060;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+.checkpoint:nth-child(even) {
+    border-right: 3px solid #000060;
+    padding-right: 3em;
+    transform: translateX(-17em);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+    content: '';
+    background: #000060;
+    width:3em;
+    height: 0.188rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.checkpoint:nth-child(odd)::before {
+    left: 0;
+}
+.checkpoint:nth-child(even)::before {
+    right: 0;
+}
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+    content: "";
+    background: #fff;
+    box-shadow: 0 0 0.5em #00e6e6;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+.checkpoint:nth-child(even) div::before{
+    right: -0.5em;
+}
+.timeline .checkpoint .read-more-btn {
+    background:linear-gradient(to right, rgb(0,0,128),rgb(113, 113, 255),rgb(0,0,128) );
+    color: white;
+    font-size: clamp(.8rem,1.3vw,1.7rem);
+    border: none;
+}
+.timeline .checkpoint .read-more-btn:hover {
+    background: white;
+    color: #000060;
+    border: 0.0525rem solid #000060;
+}
+/* Footer styles */
+
+.footer {
+    background-color: #000060;
+    padding-top: 1.25em 0;
+    color: azure;
+}
+.footer h5, address {
+    color: azure;
+}
+.copyright p {
+    color: azure;
+}
+.footer .container {
+    padding-top: clamp(0.2rem,1.8vw,4.8rem);
+}
+.footer-heading {
+    border-bottom: 0.1rem solid #ffd11a;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.313rem;
+}
+.footer ul, .footer address {
+    padding-left: 0;
+    list-style: none;
+}
+.footer ul li, .footer address p {
+    margin-bottom: 0.313rem;
+}
+.footer i {
+    color: azure;
+}
+.footer a {
+    text-decoration: none;
+    color:azure;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.copyright {
+    border-top: 0.1rem solid #ffd11a;
+    margin-top: 1.25rem;
+    padding-top: 0.625rem;
+    text-align: center;
+}
+.footer ul, .footer address, .footer a {
+    word-wrap: break-word; /* Ensure text wraps properly */
+}
+.footer ul li a,
+.footer address {
+    font-size: clamp(0.75rem,1.5vw,1.25rem);
+}
+
+
+
+
+
+/* aboutus styles */
+
+.aboutus li{
+    font-size: clamp(0.9rem, 1.3vw, 2rem); 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: clamp(1.9rem,3.5vw,3rem);
+}
+.aboutus h2 {
+    font-size: clamp(1.4rem,5vw,3rem);
+    color: #000080;
+}
+.aboutus .colored {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.aboutus ul {
+    list-style-type: none; /* Remove default bullets */
+  
+}
+
+.aboutus ul li {
+    position: relative;
+    /* Space for the tick mark */
+    margin-bottom: 10px; /* Space between list items */
+    font-size: clamp(.8rem,1.3vw,1.7rem);
+}
+
+.aboutus ul li:before {
+    content: '✔';  /* Font Awesome tick mark icon */
+    font-size: clamp(0.9rem, 1.3vw, 2rem); 
+    font-weight: 900;
+    position: absolute;
+    top:1px;
+    left:-1.6rem;
+    color: #ffcc00;/* Tick mark color */
+}
+
+
+
+
+
+/* services styles */
+.container1 {
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 1.25rem;
+     box-sizing: border-box;
+ }
+ 
+ .wrapper {
+     max-width: 62.5em;
+     margin-top: 0px;
+     width: 100%;
+     padding: 1.625em 1.25em;  
+     background-color: lavender;
+     border-radius: 20px;
+     box-shadow: 2px 2px 10px 2px rgba(49, 39, 239, 0.5);
+ }
+ 
+ .accordion-header {
+     background-color: #000080;
+     padding:1vh;
+    
+     border: 2px solid #000080;
+     font-weight: bold;
+     cursor: pointer;
+     box-shadow: 2px 2px 10px 2px rgba(239, 230, 39, 0.5);
+ }
+ 
+ .accordion-button {
+     background-color: #ebebf0 !important;
+     color: white !important;
+     border: 1px solid #FFD700;
+     border-radius:20px
+     
+ }
+ 
+ .accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed {
+     border-radius: 30px;
+ }
+ 
+ .accordion-button .text {
+     padding-left: 10px; /* Adds space between the icon and text */
+ }
+ 
+ 
+ .accordion-body {
+     background: linear-gradient(to left, rgba(179, 179, 255, 0), rgba(204, 204, 255, 1));
+ 
+     text-align: justify;
+ 
+     line-height: 1.6; /* Adjust as needed */
+ }
+ 
+  .text {
+    color: #000080;
+    font-weight:600;
+    font-size: clamp(.8rem,1.3vw,1.7rem);
+ }
+ .accordion-button .text:hover {
+     text-shadow: 0 0 10px rgba(239, 246, 39, 0.5), 0 0 10px rgba(239, 246, 39, 0.5);
+ }
+ 
+ .text:hover i {
+     text-shadow: 0 0 10px rgba(239, 246, 39, 0.5), 0 0 10px rgba(239, 246, 39, 0.5);
+ }
+ /* Add rounded corners to the first heading */
+ h2#flush-headingOne {
+     border-top-left-radius: 1.43rem;
+     border-top-right-radius: 1.43rem;
+ }
+ 
+ /* Add rounded corners to the last heading */
+ h2#flush-headingFive {
+     border-bottom-right-radius: 1.43rem;
+     border-bottom-left-radius: 1.43rem;
+ }
+ 
+ /* Make background transparent for the first and last items in the accordion */
+ .accordion-flush > .accordion-item:first-child,
+ .accordion-flush > .accordion-item:last-child {
+     background: transparent;
+ }
+ 
+ /* Add rounded corners to the last item in the accordion header when collapsed */
+ .accordion-header.last {
+     border-bottom-right-radius: 1.43rem;
+     border-bottom-left-radius: 1.43rem;
+ }
+ 
+ 
+ 
+ /* Add rounded corners to the accordion body when collapsed */
+ .accordion-body.last {
+     border-bottom-right-radius: 1.43rem;
+     border-bottom-left-radius: 1.43rem;
+ }
+
+
+
+
+
+
+/* Contact html styles */
+label, input, option, textarea, button, select {
+    font-size: clamp(.9rem,1.3vw,1.7rem);
+}
+
+.bg-image {
+    background-image: url('./Images/bg.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 140vh; /* Full viewport height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.75rem 1.25rem; /* Converted from 60px 20px */
+  }
+  
+  .contact .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    max-width: 43.75rem; /* Converted from 800px */
+    width: 100%;
+    padding: 1.25rem; /* Converted from 20px */
+    border-radius: 0.9375rem; /* Converted from 15px */
+    backdrop-filter: blur(0.625rem); /* Converted from 10px */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Converted from 0 4px 6px */
+    margin-top: 4vw;
+    margin-bottom: 3.5vw;
+  }
+  .form-control{
+    padding-left: 1rem;
+  }
+  .form-floating>label {
+    top: -0.3em;
+  }
+
+  .form-floating .form-control, .form-floating .form-select {
+    background: transparent;
+    border: none;
+    border-bottom: 0.125rem solid white; /* Converted from 2px */
+    border-radius: 0;
+    color: white;
+    padding-left: 0.625rem;
+    outline: none; /* Remove default focus outline */
+    box-shadow: none; /* Remove box shadow */
+    -webkit-font-smoothing: antialiased; 
+  }
+  
+  .form-floating .form-control:focus, .form-floating .form-select:focus, .form-floating textarea:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: none; /* Remove box shadow on focus */
+  }
+
+  .form-floating label {
+    color: white;
+    text-shadow: 0 0 0.0625rem rgba(0, 0, 0, 0.5); /* Converted from 0px 0px 1px */
+  }
+  
+  .form-container h2, .form-container h5 {
+    color: white;
+    text-shadow: 0 0 0.0625rem rgba(0, 0, 0, 0.5); /* Converted from 0px 0px 1px */
+    -webkit-font-smoothing: antialiased; /* Improve font rendering */
+  }
+  .form-container .btn {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 0.425em;
+    width: 5rem;
+  }
+.btn:hover {
+    color: azure;
+    background-color:black;
+}
+
+
+
+
+@media (max-width:1150px) {
+    .timeline {
+        width: 80vw;
+    }
+    .timeline .checkpoint {
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .checkpoint::before {
+        width: 0.188rem;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint div::before {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+      padding-top: 1.4rem;
+    }
+  }
